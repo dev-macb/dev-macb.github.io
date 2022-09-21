@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('Imagens/Fundo.jpg');
+    font-size: 16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.filtro_vertical {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    border-top: 3px solid #2850B8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteudo_rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cubo {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+.cubo img{
+    width: 130px;
+    height: 100%;
+}
+
+.sobre {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #2850B8;
+}
