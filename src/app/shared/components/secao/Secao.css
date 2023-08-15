@@ -1,0 +1,13 @@
+.pagina-secao {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+}
+
+.secao-esquerda {
+    width: 50%;
+}
+
+.secao-direita {
+    width: 50%;
+}

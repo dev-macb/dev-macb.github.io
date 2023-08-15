@@ -1,0 +1,44 @@
+.portifolio-conteiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portifolio-conteudo {
+    width: 80%;
+    height: 80%;
+}
+
+.carrossel-titulo {
+    height: 20%;
+    display: flex;
+    align-items: end;
+    font-size: 2.5rem;
+    color: #303030;
+}
+
+.carrossel-texto {
+    height: 60%;
+    display: flex;
+    color: #606060;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.carrossel-butao {
+    font-size: 1.2em;
+    color: #606060;
+    font-weight: 600;
+    padding: 20px 80px;
+    border-radius: 10px;
+    background-color: #FFF;
+    border: 3px solid #606060;
+}
+
+.carrossel-butao:hover {
+    transition: .3s;
+    color: #303030;
+    border: 3px solid #303030;
+    background-color: #F5F5F5;
+}

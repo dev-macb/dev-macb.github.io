@@ -1,0 +1,42 @@
+/* Interruptor do Tema */
+
+.btn-toggle {
+    width: 80px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.btn-toggle .input-toggle {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.interruptor {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #909090;
+}
+
+.interruptor:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    border-radius: 20px;
+    background-color: #FFF;
+}
+
+.input-toggle:checked + .interruptor:before {
+    transform: translateX(40px);
+    background-color: #303030;
+}

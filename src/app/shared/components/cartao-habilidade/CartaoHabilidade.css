@@ -1,0 +1,33 @@
+.cartao-conteiner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartao-moldura {
+    width: 8vw;
+    height: 8vw;
+    display: flex;
+    transition: .5s;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    border: 3px solid #303003;
+}
+
+.cartao-moldura:hover {
+    transition: .5s;
+    border: 3px solid #000;
+    background-color: #F1F1F1;
+}
+
+.cartao-moldura:hover .cartao-texto {
+    color: #303030;
+    background-color: red;
+}
+
+.cartao-texto {
+    color: #606060;
+    font-size: 1.2em;
+}
