@@ -11,7 +11,7 @@ const ItemContato = ({ link, children }: LayoutProps) => {
     return (
         <div className='item-contato-conteiner'>
             <div className='item-contato-conteudo'>
-                <a className='item-contato-link' href={link} target="_blank">
+                <a className='item-contato-link' href={link} target='_blank' rel='noopener noreferrer'>
                     <div className='item-contato-icone-conteiner'>
                         <div className="item-contato-icone" />
                     </div>

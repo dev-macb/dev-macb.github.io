@@ -1,10 +1,6 @@
 // Importação de módulos
 import './Inicio.css';
-import { 
-    Secao, 
-    Titulo, 
-    Principal
-} from '../../shared/components';
+import { Secao, Titulo, Principal } from '../../shared/components';
 import { ItemMenu } from '../../shared/components/item-menu/ItemMenu';
 
 
@@ -18,11 +14,11 @@ const Inicio = () => {
             <Secao>
                 <div className='secao-esquerda-inicio'>
                     <nav className='menu-lateral'>
-                        <ItemMenu link='/'>Início</ItemMenu>
-                        <ItemMenu link='/sobre'>Sobre</ItemMenu>
-                        <ItemMenu link='/habilidades'>Habilidades</ItemMenu>
-                        <ItemMenu link='/portifolio'>Portifólio</ItemMenu>
-                        <ItemMenu link='/contato'>Contato</ItemMenu>
+                        <ItemMenu link='#/inicio'>Início</ItemMenu>
+                        <ItemMenu link='#/sobre'>Sobre</ItemMenu>
+                        <ItemMenu link='#/habilidades'>Habilidades</ItemMenu>
+                        <ItemMenu link='#/portifolio'>Portifólio</ItemMenu>
+                        <ItemMenu link='#/contato'>Contato</ItemMenu>
                     </nav>
                 </div>
                 <div className='secao-direita-imagem'>
