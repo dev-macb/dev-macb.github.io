@@ -1,11 +1,11 @@
 // Importação de módulos
-import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, Navigate, HashRouter } from 'react-router-dom';
 import { Inicio, Sobre, Habilidades, Portifolio, Contato } from '../pages';
 
 
 const Rotiador = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path='/inicio'      element={<Inicio />}/>
                 <Route path='/sobre'       element={<Sobre />}/>
@@ -15,7 +15,7 @@ const Rotiador = () => {
 
                 <Route path='*'            element={<Navigate to='/inicio' />}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
