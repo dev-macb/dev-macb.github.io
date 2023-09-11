@@ -1,6 +1,6 @@
 // Importação de módulos
 import './Sobre.css';
-import { Secao, Titulo, Principal } from '../../shared/components';
+import { Secao, Titulo, Principal } from '../../components';
 
 
 const Sobre = () => {
@@ -30,7 +30,7 @@ const Sobre = () => {
                 </div>
                 
                 <div className='secao-direita-sobre'>
-                    <img src={process.env.PUBLIC_URL + 'images/macb-miguel.png'} alt="cubo-tema-claro" />
+                    <img className='imagem-miguel' src={process.env.PUBLIC_URL + 'images/macb-miguel.png'} alt="Miguel Alves" />
                 </div>
             </Secao>
         </Principal>

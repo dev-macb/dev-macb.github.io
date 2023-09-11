@@ -1,0 +1,30 @@
+.pagina-titulo {
+    height: 30%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 8vh;
+    color: #000000;
+}
+
+.subtitulo {
+    font-size: 4vh;
+    color: #606060;
+}
+
+@media (max-width: 768px) {
+    .pagina-titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .titulo {
+        font-size: 2rem;
+    } 
+    .subtitulo {
+        font-size: 1rem;
+    }
+}

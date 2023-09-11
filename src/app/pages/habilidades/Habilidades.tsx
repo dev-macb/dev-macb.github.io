@@ -1,7 +1,7 @@
 // Importação de módulos
 import './Habilidades.css';
-import { Secao, Titulo, Principal } from '../../shared/components';
-import { CartaoHabilidade } from '../../shared/components/cartao-habilidade/CartaoHabilidade';
+import { Secao, Titulo, Principal } from '../../components';
+import { CartaoHabilidade } from '../../components/cartao-habilidade/CartaoHabilidade';
 
 
 const Habilidades = () => {

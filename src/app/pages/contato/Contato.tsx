@@ -1,7 +1,7 @@
 // Importação de módulos
 import './Contato.css';
-import { Secao, Titulo, Principal } from '../../shared/components';
-import { ItemContato } from '../../shared/components/item-contato/ItemContato';
+import { Secao, Titulo, Principal } from '../../components';
+import { ItemContato } from '../../components/item-contato/ItemContato';
 
 
 const Contato = () => {
@@ -40,8 +40,8 @@ const Contato = () => {
 
                 <div className='secao-direita-contato'>
                     <div className="redes-sociais">
-                        <a className='butao-redes-sociais' href="https://github.com/dev-macb" target='_blank' rel='noopener noreferrer'>Github</a>
-                        <a className='butao-redes-sociais' href="https://www.linkedin.com/in/dev-macb/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>
+                        <a className='butao-redes-sociais' href="https://github.com/dev-macb" target='_blank' rel='noopener noreferrer'>Github.</a>
+                        <a className='butao-redes-sociais' href="https://www.linkedin.com/in/dev-macb/" target='_blank' rel='noopener noreferrer'>LinkedIn.</a>
                     </div>
                 </div>
 

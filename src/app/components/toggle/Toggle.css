@@ -40,3 +40,9 @@
     transform: translateX(40px);
     background-color: #303030;
 }
+
+@media (max-width: 768px) {
+    .btn-toggle {
+        display: none;
+    }
+}

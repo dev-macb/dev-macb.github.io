@@ -31,7 +31,6 @@
     justify-content: end;
 }
 
-
 .pagina-conteiner {
     height: 90%;
     display: flex;
@@ -39,8 +38,19 @@
     flex-direction: column;
 }
 
-
 .pagina-conteudo {
     width: 90%;
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .principal {
+        height: 90%;
+    }
+
+    .pagina-conteudo {
+        display: flex;
+        height: 90%;
+        flex-direction: column-reverse;
+    }
 }

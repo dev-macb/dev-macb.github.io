@@ -1,6 +1,6 @@
 .item-contato-conteiner {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 2vh;
 }
 
 .item-contato-conteudo {
@@ -16,7 +16,7 @@
 
 .item-contato-link:hover .item-contato-icone {
     transition: 0.5s;
-    transform: rotate(145deg);
+    transform: rotate(135deg);
     background-color: #303030; 
 }
 
@@ -57,6 +57,6 @@
 
 
 .titulo-contato {
-    font-size: 2em;
+    font-size: 3vh;
     color: #606060;
 }

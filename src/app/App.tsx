@@ -1,11 +1,12 @@
 // Importação de módulos
+import './App.css';
 import { Rotiador } from './routes';
-import { Cabecalho, Rodape } from './shared/components';
+import { Cabecalho, Rodape } from './components';
 
 
 const App = () => {
     return (
-        <div style={{ height: '100vh' }}>
+        <div className='conteiner'>
             <Cabecalho />
             <Rotiador />
             <Rodape />

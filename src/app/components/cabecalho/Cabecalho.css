@@ -7,8 +7,14 @@ header {
 }
 
 .icone-losangulo {
-    width: 20px;
-    height: 20px;
+    width: 2vh;
+    height: 2vh;
     rotate: 45deg;
     background-color: #000;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 5%;
+    }
 }

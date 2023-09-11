@@ -1,7 +1,7 @@
 // Importação de módulos
 import './Inicio.css';
-import { Secao, Titulo, Principal } from '../../shared/components';
-import { ItemMenu } from '../../shared/components/item-menu/ItemMenu';
+import { Secao, Titulo, Principal } from '../../components';
+import { ItemMenu } from '../../components/item-menu/ItemMenu';
 
 
 const Inicio = () => {

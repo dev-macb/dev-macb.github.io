@@ -1,0 +1,9 @@
+.conteiner {
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        height: 90vh;
+    }
+}

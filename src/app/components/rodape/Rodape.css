@@ -8,6 +8,12 @@ footer {
 
 .direito-autoral {
     color: #000;
-    font-size: 1em;
+    font-size: 1.8vh;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
 }

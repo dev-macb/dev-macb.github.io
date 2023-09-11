@@ -8,7 +8,7 @@
 
 
 .texto-contato {
-    font-size: 1.2em;
+    font-size: 2vh;
 }
 
 
@@ -37,7 +37,7 @@
 
 
 .butao-redes-sociais {
-    font-size: 4em;
+    font-size: 10vh;
     text-decoration: none;
     color: #606060;
     transition: 0.3s;

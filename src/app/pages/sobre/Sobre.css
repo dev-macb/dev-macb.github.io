@@ -7,11 +7,11 @@
 
 .texto-sobre-mim {
     color: #606060;
-    font-size: 1.2rem;
+    font-size: 1.8vh;
 }
 
 .baixar-curriculo {
-    font-size: 1.2rem;
+    font-size: 2vh;
     color: #606060;
     font-weight: 600;
     margin: 50px 0;
@@ -33,4 +33,29 @@
     display: flex;
     align-items: start;
     justify-content: center;
+}
+
+.imagem-miguel {
+    height: 90%;
+}
+
+@media (max-width: 768px) {
+    .secao-esquerda-sobre {
+        width: 100%;
+    }
+    .imagem-miguel {
+        display: none;
+    }
+
+    .texto-sobre-mim {
+        padding-top: 3rem;
+        font-size: .8rem;
+    }
+
+    .baixar-curriculo {
+        font-size: .8rem;
+        margin: 30px 0;
+        padding: 10px 50px;
+        border-radius: 10px;
+    }
 }
