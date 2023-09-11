@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+<h1 align="center">🔷 Meu Ambiente de Trabalho 🔷</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h2 id="objetivo">🎯 Objetivo</h2>
+<p>
+    Este repositório contém os arquivos de configuração do meu ambiente de 
+    desenvolvimento pessoal, incluindo arquivos de configuração para diversas 
+    ferramentas que utilizo, como meu editor de código, terminal, shells, e 
+    outras configurações personalizadas que aprimoram minha produtividade no 
+    dia-a-dia. Manter esses arquivos em um repositório me permite sincronizá-los 
+    facilmente em diferentes dispositivos e garantir que minhas configurações 
+    permaneçam consistentes em todas as máquinas em que trabalho. Sinta-se 
+    livre para utilizar esses arquivos como base para suas próprias configurações 
+    pessoais de desenvolvimento.
+</p>
+<p align="center">
+    <button style="
+        font-size: 2rem;
+        padding: 10px 80px;
+        border: none;
+        color: #FFF;
+        background-color: #0074BA;
+    "><a href="https://dev-macb.github.io">Visitar</a></button>
+</p>
+<p align="center">🔷</p>
 
-In the project directory, you can run:
 
-### `yarn start`
+<h2 id="instalação">🔧 Instalação</h2>
+<p>
+    Para clonar o projeto para sua máquina via <a target="_blank" href="https://git-scm.com/">git</a>, execute os comandos a seguir:
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ mkdir dev-macb.github.io && cd braz
+$ git clone https://github.com/dev-macb/dev-macb.github.io
+```
+<p align="center">🔷</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h2 id="licença">📄 Licença</h2>
+<p>
+    O repositório <strong>dev-macb.github.io</strong> utiliza a <strong>licença MIT</strong> em todo seu código, confira suas condições em <a href="https://github.com/Miguel-acb9/dev-macb.github.io/blob/main/LICENSE">LICENSE</a>.
+</p>
+<p align="center">🔷</p>
