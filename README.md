@@ -1,26 +1,17 @@
-<h1 align="center">🔷 Meu Ambiente de Trabalho 🔷</h1>
+<h1 align="center">🔷 Portifólio 🔷</h1>
 
 
 <h2 id="objetivo">🎯 Objetivo</h2>
 <p>
-    Este repositório contém os arquivos de configuração do meu ambiente de 
-    desenvolvimento pessoal, incluindo arquivos de configuração para diversas 
-    ferramentas que utilizo, como meu editor de código, terminal, shells, e 
-    outras configurações personalizadas que aprimoram minha produtividade no 
-    dia-a-dia. Manter esses arquivos em um repositório me permite sincronizá-los 
-    facilmente em diferentes dispositivos e garantir que minhas configurações 
-    permaneçam consistentes em todas as máquinas em que trabalho. Sinta-se 
-    livre para utilizar esses arquivos como base para suas próprias configurações 
-    pessoais de desenvolvimento.
+    Neste repositório, você encontrará os arquivos que compõem o meu portfólio web pessoal. 
+    Aqui, estão reunidos todos os elementos necessários para a construção do meu site, desde 
+    o código-fonte até as imagens e estilos utilizados. Este repositório desempenha um papel 
+    fundamental ao permitir que eu mantenha e compartilhe meu portfólio de forma consistente 
+    em diferentes dispositivos. Sinta-se à vontade para explorar e, se desejar, utilizar este 
+    projeto como inspiração para criar o seu próprio portfólio pessoal na web.
 </p>
 <p align="center">
-    <button style="
-        font-size: 2rem;
-        padding: 10px 80px;
-        border: none;
-        color: #FFF;
-        background-color: #0074BA;
-    "><a href="https://dev-macb.github.io">Visitar</a></button>
+    <a href="https://dev-macb.github.io">Visitar</a>
 </p>
 <p align="center">🔷</p>
 
