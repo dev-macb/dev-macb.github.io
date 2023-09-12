@@ -24,7 +24,7 @@ const Sobre = () => {
                         um serviço de qualidade e soluções eficientes.
                     </p>
 
-                    <a href={process.env.PUBLIC_URL + 'texto.txt'} download>
+                    <a href={process.env.PUBLIC_URL + 'CV-MiguelAlves.pdf'} download>
                         <button className='baixar-curriculo'>Baixar Currículo</button>
                     </a>
                 </div>

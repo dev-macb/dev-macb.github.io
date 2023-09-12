@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 interface IProjeto {
     titulo: string;
+    categoria: string;
     texto: string;
     link: string;
 }
@@ -12,8 +13,6 @@ interface IProjeto {
 interface IDadosCarrossel {
     dados: IProjeto[];
 }
-
-
 
 
 const Carrossel : React.FC<IDadosCarrossel> = ({ dados }) => {
@@ -37,7 +36,11 @@ const Carrossel : React.FC<IDadosCarrossel> = ({ dados }) => {
 
                 <div className='carrossel-cartao-conteiner'>
                     <div className='carrossel-cartao-conteudo'>
-                        <h3 className='carrossel-titulo'>{projeto.titulo}</h3>
+                        <div className='carrossel-cabecalho'>
+                            <h3 className='carrossel-titulo'>{projeto.titulo}</h3>
+                            <span className='carrossel-categoria'>{projeto.categoria}</span>
+                        </div>
+                        
                         <p className='carrossel-texto'>{projeto.texto}</p>
                         <a href={projeto.link} target='_blank' rel='noopener noreferrer'>
                             <button className='carrossel-butao'>Visitar</button>
