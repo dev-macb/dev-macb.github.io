@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --cor-primaria: #001752;
+    --cor-primaria-light: #001752;
+    --cor-primaria-dark: #001752;
+
+    --cor-secundaria: #348AE0;
+    --cor-secundaria-claro: #348AE0;
+    --cor-secundaria-escuro: #348AE0;
+
+    --cor-destaque: #90B7DE;
+    --cor-destaque-claro: #90B7DE;
+    --cor-destaque-escuro: #90B7DE;
+
+    --cor-texto: #303030;
+    --cor-texto-claro: #909090;
+    --cor-texto-escuro: #101010;
+
+    --cor-background: #f5f5f5;
+}
+
+body.dark-theme {
+    --color-primary: #1db954;
+    --color-primary-light: #53e67b;
+    --color-primary-dark: #14833b;
+  
+    --color-secondary: #343a40;
+    --color-secondary-light: #5a6268;
+    --color-secondary-dark: #212529;
+  
+    --color-accent: #f4c20d;
+    --color-accent-light: #ffd756;
+    --color-accent-dark: #c69500;
+  
+    --cor-texto: #f5f5f5;
+    --color-text-light: #e0e0e0;
+    --color-text-dark: #ffffff;
+  
+    --cor-background: #303030;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-button-background);
+    color: var(--color-button-text);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.02);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Seção de Apresentação*/
+.secao-apresentacao--titulo h1 {
+    font-size: 2.5vw;
+}
+
+.secao-apresentacao--titulo h2 {
+    font-size: 1.8vw;
+}
+
+.titulo-especial {
+    cursor: default;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+.titulo-especial-inverso {
+    cursor: default;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+.secao-apresentacao--ver-mais {
+    display: flex;
+    cursor: default;
+    align-items: center;
+    animation: moverCimaBaixo 2s infinite alternate;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.secao-apresentacao--ver-mais span {
+    font-size: 1rem;
+    color: #909090;
+    align-content: 'center';
+}
+
+.texto-pequeno {
+    font-size: 1rem;
+}
+
+@keyframes moverCimaBaixo {
+    0% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(5px);
+    }
+}

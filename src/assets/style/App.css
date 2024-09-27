@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--cor-texto);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-background-claro);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #303030;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #303030;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #303030;
+
+}
+
+#root {
+    /* Paleta de cores */
+    --cor-primaria: #001752;
+    --cor-primaria-claro: #001752;
+    --cor-primaria-escuro: #001752;
+
+    --cor-secundaria: #348AE0;
+    --cor-secundaria-claro: #348AE0;
+    --cor-secundaria-escuro: #348AE0;
+
+    --cor-destaque: #90B7DE;
+    --cor-destaque-claro: #90B7DE;
+    --cor-destaque-escuro: #90B7DE;
+
+    --cor-texto: #303030;
+    --cor-texto-claro: #F1F1F1;
+    --cor-texto-escuro: #101010;
+
+    --cor-background-claro: #f8f8fc;
+    --cor-background-escuro: #1A1A1A;
+
+    /* Propriedades globais */
+    line-height: 1.5;
+    font-weight: 500;
+    color-scheme: light dark;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Seção de Apresentação*/
+.secao-apresentacao--titulo h1 {
+    font-size: 2.5vw;
+}
+
+.secao-apresentacao--titulo h2 {
+    font-size: 1.8vw;
+}
+
+.titulo-especial {
+    cursor: default;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+.titulo-especial-inverso {
+    cursor: default;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+.secao-apresentacao--ver-mais {
+    display: flex;
+    cursor: default;
+    align-items: center;
+    animation: moverCimaBaixo 2s infinite alternate;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.secao-apresentacao--ver-mais span {
+    font-size: 1rem;
+    color: #909090;
+    align-content: 'center';
+}
+
+.texto-pequeno {
+    font-size: 1rem;
+}
+
+@keyframes moverCimaBaixo {
+    0% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(5px);
+    }
+}
