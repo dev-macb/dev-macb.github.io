@@ -1,0 +1,39 @@
+.interruptor {
+    width: 80px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.interruptor-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.interruptor-chave {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 20px;
+    background-color: var(--cor-texto-claro);
+}
+
+.interruptor-chave:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    border-radius: 20px;
+    background-color: var(--cor-background);
+}
+
+.interruptor-checkbox:checked + .interruptor-chave:before {
+    transform: translateX(40px);
+}

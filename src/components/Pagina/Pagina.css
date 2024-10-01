@@ -1,0 +1,17 @@
+.pagina {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal {
+    width: 80%;
+    height: 100%;
+    border: 5px solid var(--cor-primaria);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}

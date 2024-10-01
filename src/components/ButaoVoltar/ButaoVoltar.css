@@ -1,0 +1,30 @@
+.butao-voltar {
+    font-weight: 700;
+    gap: 20px;
+    display: flex;
+    font-size: 3vh;
+    color: var(--cor-primaria);
+    align-items: center;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color 1s ease, transform 1s ease;
+}
+
+.butao-voltar:hover {
+    transform: translateX(-20px);
+    transition: transform 0.5s ease;
+}
+
+.butao-voltar:hover span {
+    color: var(--cor-destaque);
+    transition: color 0.5s ease;
+}
+
+.butao-voltar svg path {
+    transition: fill 1s ease, transform 1s ease;
+}
+
+.butao-voltar:hover svg path {
+    fill: var(--cor-destaque);
+    transition: fill 0.5s ease, transform 0.5s ease;
+}
