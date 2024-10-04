@@ -7,12 +7,19 @@ import { Pagina } from '../components/Pagina/Pagina';
 import { usarTema } from '../contexts/TemaContext';
 
 import imagemMiguelAlves from '../assets/MiguelAlves.jpg';
+import curriculoPDF from '../assets/CV-MiguelAlves.pdf';
+
 
 const Sobre: React.FC = () => {
     const { alterarTema } = usarTema();
 
     const tratarBaixarCurriculo = () => {
-
+        const link = document.createElement('a');
+        link.href = curriculoPDF;
+        link.setAttribute('download', 'MiguelAlves-Curriculo.pdf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -31,16 +38,14 @@ const Sobre: React.FC = () => {
     
                     <Caixa.Vertical style={{ alignItems: 'start', justifyContent: 'start' }}>
                         <p>
-                            Sou Miguel Alves, um desenvolvedor Full Stack com formação em 
-                            sistemas de informação pela Universidade Federal de Goiás (UFG). 
-                            Tenho experiência em desenvolvimento web, utilizando linguagens 
-                            como HTML, CSS, JavaScript, Python e Node.js. Estou em constante 
-                            atualização com as últimas tecnologias e práticas de desenvolvimento 
-                            para fornecer soluções eficazes e personalizadas para cada projeto. 
-                            Meu objetivo é construir relacionamentos de longo prazo com os clientes, 
-                            oferecendo um serviço de qualidade e soluções eficientes.
+                            Meu nome é Miguel Alves, sou desenvolvedor de software com formação em <strong>Sistemas de
+                            Informação</strong> pela Universidade Federal de Goiás (UFG). Possuo experiência sólida em 
+                            desenvolvimento web, utilizando linguagens como C#, Python, JavaScript/Typescript, e 
+                            Node.js. Estou em constante atualização quanto às mais recentes tecnologias e práticas 
+                            de desenvolvimento, visando sempre fornecer soluções eficazes e personalizadas para 
+                            cada projeto. Meu foco é estabelecer relacionamentos de longo prazo com os clientes, 
+                            oferecendo um serviço de excelência e soluções eficientes.
                         </p>
-
                         <button onClick={ tratarBaixarCurriculo } className='sobre--botao-baixar-curriculo'>
                             Baixar Currículo
                             <svg width="24" height="24" viewBox="0 0 24 24" >

@@ -2,8 +2,8 @@
 
 :root {
     --cor-primaria: #303030;
-    --cor-secundaria: #909090;
-    --cor-destaque: #D0D0D0;
+    --cor-secundaria: #D0D0D0;
+    --cor-destaque: #909090;
 
     --cor-texto-claro: #909090;
     --cor-texto-escuro: #303030;
@@ -67,7 +67,7 @@ h4 {
 
 h5 {
     font-size: 2vh;
-    color: var(--cor-secundaria);
+    color: var(--cor-destaque);
 }
 
 p {
@@ -84,6 +84,10 @@ ul {
 li {
     align-items: center;
     display: flex;
+}
+
+button {
+    background-color: var(--cor-background);
 }
 
 

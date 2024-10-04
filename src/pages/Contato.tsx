@@ -6,6 +6,7 @@ import { Interruptor } from '../components/Interruptor/Interruptor';
 import { Pagina } from '../components/Pagina/Pagina';
 import { usarTema } from '../contexts/TemaContext';
 
+
 const Contato: React.FC = () => {
     const { alterarTema } = usarTema();
 

@@ -10,7 +10,7 @@ interface ICartao {
 
 const Cartao: React.FC<ICartao> = ({ titulo, children }) => {
     return (
-        <div className="cartao-conteiner">
+        <div className='cartao-conteiner'>
             <div className='cartao-conteudo'>
                 { children }
             </div>

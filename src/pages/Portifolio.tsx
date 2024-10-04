@@ -7,28 +7,34 @@ import { Pagina } from '../components/Pagina/Pagina';
 import { usarTema } from '../contexts/TemaContext';
 import { Carrossel } from '../components/Carrossel/Carrossel';
 
+
 const listaProjetos = [
     {
-      titulo: "MacB Theme",
-      descricao: "O MacB é um tema minimalista que não só oferece uma estética limpa e moderna, mas também proporciona facilidade de personalização e realce de sintaxe avançado. Projetado para elevar a produtividade e a qualidade do código, o MacB é a escolha ideal para desenvolvedores que buscam uma experiência de desenvolvimento superior no Visual Studio Code.",
-      tags: ['tema', 'vs-code']
+      titulo: 'MacB Theme',
+      descricao: 'MacB é um tema minimalista para o Visual Studio Code, focado na legibilidade do código e na personalização do ambiente de desenvolvimento.',
+      tags: ['extenção', 'tema', 'vs-code'],
+      link: 'https://marketplace.visualstudio.com/items?itemName=dev-macb.macb-vscode-theme'
     },
     {
-      titulo: "Ambivar",
-      descricao: "O Ambivar é um pacote em PHP que tem como objetivo facilitar a gestão de variáveis de ambiente em projetos. Esse pacote permite carregar essas variáveis através de um arquivo .env, que é lido automaticamente ou especificando o diretório do arquivo.",
-      tags: ['pacote']
+      titulo: 'Ambivar',
+      descricao: 'Ambivar é um pacote PHP que facilita o gerenciamento de variáveis de ambiente em arquivos `.env`, garantindo segurança e modularidade.',
+      tags: ['pacote', 'env'],
+      link: 'https://packagist.org/packages/dev-macb/ambivar'
     },
     {
-      titulo: "Braz",
-      descricao: "O Braz é uma aplicação que disponibiliza diversas funcionalidades com o intuito de auxiliar os desenvolvedores nos projetos que necessitam da geração de dados randômicos válidos dos principais documentos pessoais do Brasil, bem como sua validação.",
-      tags: ['pacote', 'cli']
+      titulo: 'Braz',
+      descricao: 'Braz é uma ferramenta CLI para geração e validação de dados randômicos, como CPF e CNPJ, com foco em automação de testes.',
+      tags: ['pacote', 'cli'],
+      link: 'https://pypi.org/project/braz/'
     },
     {
-        titulo: "Poderoso",
-        descricao: "O Poderoso é um pacote PHP que oferece uma abstração de banco de dados completa e fácil de usar. Com funções simples para configurar e conectar, é possível criar, ler, atualizar e excluir registros do banco de dados em poucos minutos.",
-        tags: ['']
+      titulo: 'Poderoso',
+      descricao: 'Poderoso é um pacote PHP que abstrai operações CRUD com bancos de dados, facilitando a implementação de conexões e consultas.',
+      tags: ['pacote', 'framework'],
+      link: 'https://packagist.org/packages/dev-macb/poderoso'
     }
 ];
+
 
 const Portifolio: React.FC = () => {
     const { alterarTema } = usarTema();
