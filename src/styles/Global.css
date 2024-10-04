@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --cor-primaria: #303030;
+    --cor-secundaria: #D0D0D0;
+    --cor-destaque: #909090;
+
+    --cor-texto-claro: #909090;
+    --cor-texto-escuro: #303030;
+
+    --cor-background: #f1f1f1;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.tema-escuro {
+    --cor-primaria: #D0D0D0;
+    --cor-secundaria: #909090;
+    --cor-destaque: #606060;
+
+    --cor-texto-claro: #909090;
+    --cor-texto-escuro: #f1f1f1;
+
+    --cor-background: #303030;
+}
+
+h1 {
+    font-size: 4.5vw;
+    cursor: default;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+h2 {
+    background-image: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria));
+    cursor: default;
+    font-size: 2vw;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+}
+
+h3 {
+    color: var(--cor-primaria);
+    font-size: 5vh;
+    transition: 0.5s;
+}
+
+h4 {
+    font-size: 3vh;
+}
+
+h5 {
+    font-size: 2vh;
+    color: var(--cor-destaque);
+}
+
+p {
+    color: var(--cor-primaria); 
+    font-size: 2vh;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+li {
+    align-items: center;
+    display: flex;
+}
+
+button {
+    background-color: var(--cor-background);
+}
+
+
+/* Pagina Início */
+.inicio--menu-item-link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.inicio--menu-item-link:hover h3 {
+    color: var(--cor-destaque);
+    transform: translateX(20px);
+}
+
+.inicio--menu-item-link:hover .inicio--menu-item-losangulo {
+    background-color: var(--cor-destaque);
+    transform: rotate(135deg);
+}
+
+.inicio--menu-item-losangulo {
+    background-color: var(--cor-secundaria);
+    height: 2vh;
+    margin-right: 50px;
+    transform: rotate(45deg);
+    transition: 0.5s;
+    width: 2vh;
+}
+
+.inicio--imagem-cubo-impossivel {
+    animation:spin 20s linear infinite;
+    -moz-animation:spin 20s linear infinite;
+    -webkit-animation:spin 20s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+/* Pagina Sobre */
+.sobre--botao-baixar-curriculo {
+    height: 50px;
+    padding: 0 40px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-escuro);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    transition: 0.5s ease;
+}
+
+.sobre--botao-baixar-curriculo:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 20px 50px var(--cor-destaque);
+    background-color: var(--cor-destaque);
+}
+
+
+/* Pagina Habilidades */
+.cartao-conteiner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartao-moldura {
+    width: 8vw;
+    height: 8vw;
+    display: flex;
+    transition: .5s;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    border: 3px solid #303003;
+}
+
+.cartao-moldura img {
+    width: 80%;
+}
+
+.cartao-moldura:hover {
+    transition: .5s;
+    border: 3px solid #000;
+    background-color: #F1F1F1;
+}
+
+.cartao-moldura:hover .cartao-texto {
+    color: #303030;
+    background-color: red;
+}
+
+.cartao-texto {
+    color: #606060;
+    font-size: 2vh;
+}
+
+.secao-central-conteiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-central-conteudo {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.secao-central-linha1 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.secao-central-linha2 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+
+/* Pagina Portifólio */
+
+
+/* Pagina Contato */
+.contato--menu-item-link {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: var(--cor-texto-claro);
+    gap: 20px;
+}
+
+.contato--menu-item-losangulo {
+    background-color: var(--cor-secundaria);
+    transform: rotate(45deg);
+    transition: 0.5s;
+    width: 1.2vh;
+    height: 1.2vh;
+}
+
+.contato--menu-item {
+    transition: 0.5s ease;
+}
+
+.contato--menu-item-link:hover .contato--menu-item {
+    transform: translateX(20px);
+}
+
+.contato--menu-item-link:hover div h4 {
+    text-decoration: underline;
+    color: var(--cor-destaque);
+}
+
+
+.contato--menu-item-link:hover .contato--menu-item-losangulo {
+    background-color: var(--cor-destaque);
+    transform: rotate(135deg);
+}
+
+.contato--item-link-externo {
+    font-size: 10vh;
+    text-decoration: none;
+    color: var(--cor-texto-claro);
+    transition: 0.3s;
+}
+
+
+.contato--item-link-externo:hover {
+    color: var(--cor-destaque);
+    transition: 0.5s;
+    transform: translateX(-10px);
+    text-decoration: underline;
+}

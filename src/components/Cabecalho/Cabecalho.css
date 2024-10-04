@@ -1,0 +1,15 @@
+/* Cabecalho */
+.cabecalho-conteiner {
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+}
+
+.icone-losangulo {
+    width: 2vh;
+    height: 2vh;
+    rotate: 45deg;
+    background-color: var(--cor-primaria);
+}
