@@ -1,12 +1,31 @@
 {
-    "nome": "",
-    "titulo": "",
-    "sobre": "",
-    "habilidades": [],
-    "experiencias": [],
+    "nome": "Miguel Alves",
+    "titulo": "Desenvolvedor Frontend",
+    "sobre": "Profissional dedicado ao desenvolvimento web, com foco em React e TypeScript. Apaixonado por criar interfaces modernas, acessíveis e eficientes.",
+    "habilidades": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML/CSS",
+        "Vite"
+    ],
+    "experiencias": [
+        {
+            "cargo": "Desenvolvedor Frontend",
+            "empresa": "Empresa Exemplo",
+            "periodo": "2024 - Presente",
+            "descricao": "Desenvolvimento de interfaces web modernas utilizando React e TypeScript."
+        },
+        {
+            "cargo": "Estagiário de Desenvolvimento",
+            "empresa": "Empresa Teste",
+            "periodo": "2023 - 2024",
+            "descricao": "Apoio no desenvolvimento de componentes e manutenção de aplicações web."
+        }
+    ],
     "contacto": {
-        "email": "",
-        "linkedin": "",
-        "github": ""
+        "email": "miguel.alves@email.com",
+        "linkedin": "https://www.linkedin.com/in/miguel-alves/",
+        "github": "https://github.com/dev-macb"
     }
 }
