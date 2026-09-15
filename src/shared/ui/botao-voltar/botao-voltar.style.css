@@ -1,0 +1,18 @@
+.botao-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--cor-primaria);
+    font-weight: 700;
+    transition: color var(--transicao), transform var(--transicao);
+}
+
+.botao-voltar:hover {
+    color: var(--cor-destaque);
+    transform: translateX(-.3rem);
+}
+
+.botao-voltar:focus-visible {
+    outline: 2px solid var(--cor-destaque);
+    outline-offset: .25rem;
+}

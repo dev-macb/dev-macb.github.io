@@ -1,35 +1,50 @@
-<h1 align="center">🔷 Portifólio 🔷</h1>
+# Portfólio — Miguel Alves
 
+Portfólio pessoal de Miguel Alves, desenvolvido com React, TypeScript e Vite.
 
-<h2 id="objetivo">🎯 Objetivo</h2>
-<p>
-    Neste repositório, você encontrará os arquivos que compõem o meu portfólio web pessoal. 
-    Aqui, estão reunidos todos os elementos necessários para a construção do meu site, desde 
-    o código-fonte até as imagens e estilos utilizados. Este repositório desempenha um papel 
-    fundamental ao permitir que eu mantenha e compartilhe meu portfólio de forma consistente 
-    em diferentes dispositivos. Sinta-se à vontade para explorar e, se desejar, utilizar este 
-    projeto como inspiração para criar o seu próprio portfólio pessoal na web.
-</p>
-<p align="center">
-    <a href="https://dev-macb.github.io">Visitar</a>
-</p>
-<p align="center">🔷</p>
+[Visitar o site](https://dev-macb.github.io)
 
+## Tecnologias
 
-<h2 id="instalação">🔧 Instalação</h2>
-<p>
-    Para clonar o projeto para sua máquina via <a target="_blank" href="https://git-scm.com/">git</a>, execute os comandos a seguir:
-</p>
+- React 18
+- TypeScript
+- React Router
+- Vite
+- ESLint
+
+## Pré-requisitos
+
+- Node.js 20 ou superior
+- npm 10 ou superior
+
+## Como executar
 
 ```bash
-$ mkdir dev-macb.github.io && cd braz
-$ git clone https://github.com/dev-macb/dev-macb.github.io
+git clone https://github.com/dev-macb/dev-macb.github.io.git
+cd dev-macb.github.io
+npm ci
+npm run dev
 ```
-<p align="center">🔷</p>
 
+## Comandos disponíveis
 
-<h2 id="licença">📄 Licença</h2>
-<p>
-    O repositório <strong>dev-macb.github.io</strong> utiliza a <strong>licença MIT</strong> em todo seu código, confira suas condições em <a href="https://github.com/Miguel-acb9/dev-macb.github.io/blob/main/LICENSE">LICENSE</a>.
-</p>
-<p align="center">🔷</p>
+| Comando | Finalidade |
+| --- | --- |
+| `npm run dev` | Inicia o ambiente de desenvolvimento. |
+| `npm run lint` | Verifica problemas de qualidade no código. |
+| `npm run build` | Verifica os tipos e gera a versão de produção em `dist`. |
+| `npm run check` | Executa lint e build. |
+| `npm run preview` | Abre localmente a versão de produção. |
+| `npm run deploy` | Gera a versão de produção e a publica com GitHub Pages. |
+
+## Estrutura do projeto
+
+```text
+src/
+├── app/          # configuração global, rotas, provedores e layouts
+├── assets/       # imagens e documentos importados pela aplicação
+├── pages/        # telas organizadas por rota
+└── shared/ui/    # componentes visuais reutilizáveis
+```
+
+Para criar uma página, adicione uma pasta em `src/pages` e registre a rota em `src/app/routes.tsx`. Componentes reutilizados por duas ou mais páginas pertencem a `src/shared/ui`; componentes específicos permanecem junto à própria página.

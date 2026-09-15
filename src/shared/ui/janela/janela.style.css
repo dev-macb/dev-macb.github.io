@@ -1,0 +1,20 @@
+.janela-conteiner {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+}
+
+.janela-conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 5vh;
+    padding: 50px;
+    border-radius: 30px;
+    border: 5px solid var(--cor-primaria);
+}
+
+@media (max-width: 700px) {
+    .janela-conteiner { height: auto; min-height: 90vh; }
+    .janela-conteudo { margin: 0 1rem; padding: 1.5rem; border-width: 3px; }
+}

@@ -1,15 +1,20 @@
 {
     "name": "dev-macb.github.io",
+    "description": "Portfólio pessoal de Miguel Alves, desenvolvido com React, TypeScript e Vite.",
     "homepage": "https://dev-macb.github.io",
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "engines": {
+        "node": ">=20"
+    },
     "scripts": {
         "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
         "lint": "eslint .",
-        "build": "tsc -b && vite build",
-        "dist": "gh-pages -d dist",
-        "start": "vite preview"
+        "check": "npm run lint && npm run build",
+        "deploy": "npm run build && gh-pages -d dist"
     },
     "dependencies": {
         "react": "^18.3.1",

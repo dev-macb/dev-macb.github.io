@@ -1,0 +1,31 @@
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    flex: 1;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contato-apresentacao { max-width: 65ch; }
+.contato-apresentacao > p { line-height: 1.7; }
+.contato-lista { display: grid; gap: 1rem; margin-top: 2rem; list-style: none; }
+
+.contato-lista a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform var(--transicao), color var(--transicao);
+}
+
+.contato-lista a:hover { color: var(--cor-destaque); transform: translateX(.35rem); }
+.contato-marcador { width: .8rem; height: .8rem; flex: none; background-color: var(--cor-primaria); transform: rotate(45deg); }
+.contato-lista span:last-child { display: grid; gap: .2rem; }
+.contato-lista small { color: var(--cor-secundaria); font-size: .9rem; }
+
+.contato-redes { display: grid; gap: 1rem; justify-items: end; }
+.contato-redes a { font-size: 1.25rem; font-weight: 700; text-decoration: underline; text-underline-offset: .3rem; }
+
+@media (max-width: 700px) {
+    .contato-conteudo { grid-template-columns: 1fr; }
+    .contato-redes { justify-items: start; }
+}
