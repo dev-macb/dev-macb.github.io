@@ -47,17 +47,12 @@ jobs:
         run: npm run test --if-present
 
   publicar:
-    name: Publicar no GitHub Pages
+    name: Publicar na branch gh-pages
     if: github.event.action == 'closed' && github.event.pull_request.merged == true
     needs: validar
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.publicacao.outputs.page_url }}
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: write
 
     steps:
       - name: Obter versão integrada na main
@@ -78,14 +73,14 @@ jobs:
       - name: Gerar site de produção
         run: npm run build
 
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Configurar autoria do commit de publicação
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Enviar artefato do site
-        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
-        with:
-          path: dist
-
-      - name: Publicar site
-        id: publicacao
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Publicar arquivos estáticos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          npx gh-pages -d dist -b gh-pages
