@@ -38,7 +38,7 @@ O Vite inicia o servidor de desenvolvimento em `http://localhost:5173`.
 | `npm run build` | Executa a checagem de tipos e gera `dist/`. |
 | `npm run check` | Executa `lint` e `build`; é o comando de validação padrão. |
 | `npm run preview` | Serve localmente a versão gerada em `dist/`. |
-| `npm run deploy` | Publica manualmente em `gh-pages`; não é utilizado pelo CI/CD. |
+| `npm run deploy` | Publica manualmente os arquivos de `dist/` na branch `gh-pages`. |
 
 ## Organização do código
 
@@ -80,8 +80,8 @@ Ainda não há uma suíte de testes automatizados configurada. A pipeline execut
 O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) é acionado por Pull Requests direcionados à `main`.
 
 - Em abertura, reabertura ou atualização do PR, instala dependências com `npm ci` e executa validação e testes disponíveis.
-- Em um PR fechado com merge, recompila a versão integrada da `main` e a publica no GitHub Pages.
-- O job de validação tem permissão apenas de leitura. As permissões de publicação (`pages: write` e `id-token: write`) são concedidas exclusivamente no job de deploy após o merge.
+- Em um PR fechado com merge, recompila a versão integrada da `main` e publica os arquivos gerados na branch `gh-pages`.
+- O job de validação tem permissão apenas de leitura. A permissão de escrita em conteúdo é concedida exclusivamente ao job de publicação após o merge.
 - As actions são fixadas em commits imutáveis para reduzir o risco de alterações não revisadas em tags.
 
-No repositório do GitHub, configure **Settings → Pages → Build and deployment → Source** como **GitHub Actions** para habilitar a primeira publicação pelo workflow.
+No repositório do GitHub, mantenha **Settings → Pages → Build and deployment → Source** configurado para servir a branch `gh-pages` a partir do diretório `/ (root)`.
