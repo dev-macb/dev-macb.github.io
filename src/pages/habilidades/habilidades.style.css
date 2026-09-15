@@ -1,0 +1,62 @@
+.habilidades-lista {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-content: center;
+    flex: 1;
+    max-width: 68rem;
+    gap: clamp(1.6rem, 3.6vw, 4.5rem);
+    margin: auto;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+}
+
+.habilidade-cartao {
+    display: grid;
+    width: clamp(7.5rem, 10vw, 9.6rem);
+    aspect-ratio: 1;
+    place-items: center;
+    border: 3px solid var(--cor-borda);
+    border-radius: 1.8rem;
+    transition: transform var(--transicao), border-color var(--transicao), background-color var(--transicao);
+}
+
+.habilidade-cartao:hover {
+    border-color: var(--cor-primaria);
+    background-color: color-mix(in srgb, var(--cor-primaria) 8%, transparent);
+    transform: translateY(-5px);
+}
+
+.habilidade-marca {
+    display: grid;
+    width: 5.25rem;
+    height: 5.25rem;
+    place-items: center;
+}
+
+.habilidade-marca svg {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.habilidade h3 {
+    color: var(--cor-secundaria);
+    font-size: clamp(.85rem, 1.15vw, 1.05rem);
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .habilidades-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .habilidades-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

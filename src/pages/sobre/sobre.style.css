@@ -1,0 +1,57 @@
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+    flex: 1;
+    align-items: start;
+    gap: clamp(2.5rem, 7vw, 8rem);
+    padding-top: 0;
+}
+
+.sobre-apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+    max-width: 44rem;
+    font-size: clamp(.95rem, 1.15vw, 1.15rem);
+    line-height: 1.45;
+}
+
+.sobre-curriculo {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: .75rem;
+    justify-content: center;
+    min-width: 17rem;
+    margin-top: 1.1rem;
+    padding: .85rem 1.2rem;
+    border-radius: .7rem;
+    color: var(--cor-texto-escuro);
+    background-color: #d3d3d3;
+    font-weight: 700;
+    transition: background-color var(--transicao), color var(--transicao), transform var(--transicao);
+}
+
+.sobre-curriculo:hover {
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-primaria);
+    transform: translateY(-3px);
+}
+
+.sobre-foto {
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-foto img {
+    width: min(100%, 24rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1.3rem;
+}
+
+@media (max-width: 700px) {
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,35 @@
+.pagina-acoes {
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+}
+
+.pagina-acoes .interruptor {
+    margin-left: auto;
+}
+
+.pagina-conteiner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    min-height: 0;
+    width: min(100%, 83rem);
+    margin: 0 auto;
+    padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 5vw, 5rem) 0;
+    animation: revelar-conteudo 280ms ease-out both;
+}
+
+@keyframes revelar-conteudo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-conteiner { animation: none; }
+}

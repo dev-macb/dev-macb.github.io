@@ -1,35 +1,87 @@
-<h1 align="center">🔷 Portifólio 🔷</h1>
+# dev-macb.github.io
 
+Portfólio estático de Miguel Alves, desenvolvido com React, TypeScript e Vite. A aplicação é publicada no GitHub Pages: [dev-macb.github.io](https://dev-macb.github.io).
 
-<h2 id="objetivo">🎯 Objetivo</h2>
-<p>
-    Neste repositório, você encontrará os arquivos que compõem o meu portfólio web pessoal. 
-    Aqui, estão reunidos todos os elementos necessários para a construção do meu site, desde 
-    o código-fonte até as imagens e estilos utilizados. Este repositório desempenha um papel 
-    fundamental ao permitir que eu mantenha e compartilhe meu portfólio de forma consistente 
-    em diferentes dispositivos. Sinta-se à vontade para explorar e, se desejar, utilizar este 
-    projeto como inspiração para criar o seu próprio portfólio pessoal na web.
-</p>
-<p align="center">
-    <a href="https://dev-macb.github.io">Visitar</a>
-</p>
-<p align="center">🔷</p>
+## Stack
 
+| Camada | Tecnologia |
+| --- | --- |
+| Interface | React 18 |
+| Linguagem | TypeScript |
+| Roteamento | React Router 6 |
+| Build | Vite 5 |
+| Qualidade | ESLint 9 |
+| Hospedagem | GitHub Pages |
 
-<h2 id="instalação">🔧 Instalação</h2>
-<p>
-    Para clonar o projeto para sua máquina via <a target="_blank" href="https://git-scm.com/">git</a>, execute os comandos a seguir:
-</p>
+## Requisitos
+
+- Node.js 20 ou superior
+- npm 10 ou superior
+
+## Ambiente local
 
 ```bash
-$ mkdir dev-macb.github.io && cd braz
-$ git clone https://github.com/dev-macb/dev-macb.github.io
+git clone https://github.com/dev-macb/dev-macb.github.io.git
+cd dev-macb.github.io
+npm ci
+npm run dev
 ```
-<p align="center">🔷</p>
 
+O Vite inicia o servidor de desenvolvimento em `http://localhost:5173`.
 
-<h2 id="licença">📄 Licença</h2>
-<p>
-    O repositório <strong>dev-macb.github.io</strong> utiliza a <strong>licença MIT</strong> em todo seu código, confira suas condições em <a href="https://github.com/Miguel-acb9/dev-macb.github.io/blob/main/LICENSE">LICENSE</a>.
-</p>
-<p align="center">🔷</p>
+## Scripts
+
+| Comando | Efeito |
+| --- | --- |
+| `npm run dev` | Inicia o servidor de desenvolvimento. |
+| `npm run lint` | Executa o ESLint. |
+| `npm run build` | Executa a checagem de tipos e gera `dist/`. |
+| `npm run check` | Executa `lint` e `build`; é o comando de validação padrão. |
+| `npm run preview` | Serve localmente a versão gerada em `dist/`. |
+| `npm run deploy` | Publica manualmente em `gh-pages`; não é utilizado pelo CI/CD. |
+
+## Organização do código
+
+```text
+src/
+├── app/                 # composição da aplicação, rotas, tema, layouts e estilos globais
+├── assets/              # recursos versionados importados pela aplicação
+├── pages/               # páginas por rota e seus estilos/recursos locais
+└── shared/ui/           # componentes reutilizáveis e independentes de página
+```
+
+- Registre rotas em `src/app/routes.tsx`.
+- Mantenha código específico em `src/pages/<pagina>/`.
+- Promova um componente para `src/shared/ui/` somente quando for reutilizado por mais de uma página.
+- Use `src/app/` para dependências de escopo global, como providers, layouts e configuração de rotas.
+
+### Rotas públicas
+
+| Rota | Página |
+| --- | --- |
+| `/` | Início |
+| `/sobre` | Sobre |
+| `/habilidades` | Habilidades |
+| `/portifolio` | Portfólio |
+| `/contato` | Contato |
+
+## Validação
+
+Antes de abrir um Pull Request, execute:
+
+```bash
+npm run check
+```
+
+Ainda não há uma suíte de testes automatizados configurada. A pipeline executa `npm run test --if-present`; ao adicionar um script `test` ao `package.json`, ele será executado automaticamente no CI.
+
+## CI/CD
+
+O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) é acionado por Pull Requests direcionados à `main`.
+
+- Em abertura, reabertura ou atualização do PR, instala dependências com `npm ci` e executa validação e testes disponíveis.
+- Em um PR fechado com merge, recompila a versão integrada da `main` e a publica no GitHub Pages.
+- O job de validação tem permissão apenas de leitura. As permissões de publicação (`pages: write` e `id-token: write`) são concedidas exclusivamente no job de deploy após o merge.
+- As actions são fixadas em commits imutáveis para reduzir o risco de alterações não revisadas em tags.
+
+No repositório do GitHub, configure **Settings → Pages → Build and deployment → Source** como **GitHub Actions** para habilitar a primeira publicação pelo workflow.

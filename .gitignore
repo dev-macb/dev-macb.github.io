@@ -1,23 +1,25 @@
-# Diretórios
-/dist
-/build
-/node_modules
-
-
-# Arquivos de Logs
-*.log
-*.lock
+# Dependências e arquivos gerados
+node_modules/
+dist/
+coverage/
 *.tsbuildinfo
 
-# Editor directories and files
+# Logs
+*.log
+
+# Variáveis locais
+.env
+.env.*
+!.env.example
+*.local
+
+# Configurações de editor e sistema
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-dist-ssr
-*.local

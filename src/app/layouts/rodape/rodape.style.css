@@ -1,0 +1,18 @@
+/* Rodape */
+.rodape-container {
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.rodape-link {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.rodape-link:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
