@@ -19,7 +19,7 @@
     cursor: pointer;
     position: absolute;
     border-radius: 20px;
-    background-color: gray;
+    background-color: var(--cor-secundaria);
 }
 
 .interruptor-chave:before {
@@ -31,9 +31,14 @@
     height: 30px;
     transition: 0.5s;
     border-radius: 20px;
-    background-color: black;
+    background-color: var(--cor-texto-claro);
 }
 
 .interruptor-checkbox:checked + .interruptor-chave:before {
     transform: translateX(40px);
+}
+
+.interruptor-checkbox:focus-visible + .interruptor-chave {
+    outline: 2px solid var(--cor-destaque);
+    outline-offset: 4px;
 }

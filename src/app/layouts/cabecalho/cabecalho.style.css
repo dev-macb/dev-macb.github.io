@@ -2,7 +2,7 @@
     display: flex;
     height: 5vh;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     align-items: center;
 }
 
@@ -10,5 +10,5 @@
     width: 2vh;
     height: 2vh;
     rotate: 45deg;
-    background-color: black;
+    background-color: var(--cor-primaria);
 }

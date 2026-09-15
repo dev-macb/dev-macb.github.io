@@ -4,7 +4,6 @@ import './contato.style.css';
 
 const contatos = [
     { titulo: 'E-mail', valor: 'dev.macb@gmail.com', link: 'mailto:dev.macb@gmail.com' },
-    { titulo: 'Telefone', valor: '+55 (62) 991-416-616', link: 'https://api.whatsapp.com/send/?phone=5562991416616' },
     { titulo: 'Localização', valor: 'Goiânia, Goiás, Brasil', link: 'https://www.google.com/maps/place/Goi%C3%A2nia,+GO/@-16.6958759,-49.3042674,11z' },
 ];
 

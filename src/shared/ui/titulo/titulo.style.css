@@ -1,6 +1,9 @@
 .titulo-principal {
     cursor: default;
-    font-size: 4.6vw;
+    font-size: clamp(3.5rem, 5.1vw, 5.6rem);
+    font-weight: 700;
+    letter-spacing: -.065em;
+    line-height: 1.12;
     -moz-background-clip: text;
     -webkit-background-clip: text;
     -moz-text-fill-color: transparent;
@@ -9,11 +12,20 @@
 }
 
 .titulo-secundario {
-    font-size: 2vw;
+    margin-top: .75rem;
+    font-size: clamp(1.5rem, 2.05vw, 2.45rem);
+    font-weight: 700;
+    letter-spacing: -.045em;
+    line-height: 1.15;
     cursor: default;
     -moz-background-clip: text;
     -webkit-background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent; 
     background-image: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria));
+}
+
+@media (max-width: 700px) {
+    .titulo-principal { font-size: clamp(3rem, 15vw, 4.5rem); }
+    .titulo-secundario { font-size: clamp(1.35rem, 6vw, 2rem); }
 }

@@ -1,22 +1,28 @@
 .habilidades-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     align-content: center;
     flex: 1;
-    gap: 1rem;
+    max-width: 68rem;
+    gap: clamp(1.6rem, 3.6vw, 4.5rem);
+    margin: auto;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
 }
 
 .habilidade-cartao {
-    display: flex;
-    min-height: 160px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .45rem;
-    padding: 1rem;
-    border: 2px solid var(--cor-secundaria);
-    border-radius: 1rem;
-    text-align: center;
+    display: grid;
+    width: clamp(7.5rem, 10vw, 9.6rem);
+    aspect-ratio: 1;
+    place-items: center;
+    border: 3px solid var(--cor-borda);
+    border-radius: 1.8rem;
     transition: transform var(--transicao), border-color var(--transicao), background-color var(--transicao);
 }
 
@@ -28,17 +34,29 @@
 
 .habilidade-marca {
     display: grid;
-    width: 3rem;
-    height: 3rem;
+    width: 5.25rem;
+    height: 5.25rem;
     place-items: center;
-    border-radius: 50%;
-    color: var(--cor-background);
-    background-color: var(--cor-primaria);
-    font-size: .85rem;
+}
+
+.habilidade-marca svg {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.habilidade h3 {
+    color: var(--cor-secundaria);
+    font-size: clamp(.85rem, 1.15vw, 1.05rem);
     font-weight: 700;
 }
 
-.habilidade-cartao p {
-    color: var(--cor-secundaria);
-    font-size: .9rem;
+@media (max-width: 900px) {
+    .habilidades-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .habilidades-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

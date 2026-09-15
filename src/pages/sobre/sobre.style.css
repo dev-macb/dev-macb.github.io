@@ -1,17 +1,19 @@
 .sobre-conteudo {
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
     flex: 1;
-    align-items: center;
-    gap: 3rem;
+    align-items: start;
+    gap: clamp(2.5rem, 7vw, 8rem);
+    padding-top: 0;
 }
 
 .sobre-apresentacao {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    max-width: 70ch;
-    line-height: 1.7;
+    gap: 1.35rem;
+    max-width: 44rem;
+    font-size: clamp(.95rem, 1.15vw, 1.15rem);
+    line-height: 1.45;
 }
 
 .sobre-curriculo {
@@ -19,16 +21,19 @@
     align-items: center;
     align-self: flex-start;
     gap: .75rem;
-    margin-top: .5rem;
-    padding: .8rem 1.2rem;
-    border: 2px solid var(--cor-primaria);
-    border-radius: var(--raio-borda);
+    justify-content: center;
+    min-width: 17rem;
+    margin-top: 1.1rem;
+    padding: .85rem 1.2rem;
+    border-radius: .7rem;
+    color: var(--cor-texto-escuro);
+    background-color: #d3d3d3;
     font-weight: 700;
     transition: background-color var(--transicao), color var(--transicao), transform var(--transicao);
 }
 
 .sobre-curriculo:hover {
-    color: var(--cor-background);
+    color: var(--cor-texto-claro);
     background-color: var(--cor-primaria);
     transform: translateY(-3px);
 }
@@ -39,9 +44,10 @@
 }
 
 .sobre-foto img {
-    width: min(100%, 300px);
-    border: 4px solid var(--cor-primaria);
-    border-radius: 1.25rem;
+    width: min(100%, 24rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1.3rem;
 }
 
 @media (max-width: 700px) {

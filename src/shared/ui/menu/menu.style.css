@@ -2,28 +2,28 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: clamp(1.25rem, 2.6vh, 2.25rem);
 }
 
 .menu-item-link {
     display: flex;
     align-items: center;
-    gap: 3vw;
+    gap: clamp(1rem, 2.6vw, 2.8rem);
     text-decoration: none;
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     transition: color var(--transicao);
 }
 
 .menu-item-icone {
-    width: 1.5vh;
-    height: 1.5vh;
+    width: .9rem;
+    height: .9rem;
     transform: rotate(45deg);
-    background-color: var(--cor-secundaria);
+    background-color: #d0d0d0;
     transition: background-color var(--transicao), transform var(--transicao);
 }
 
 .menu-item-texto {
-    font-size: 2.2vh;
+    font-size: clamp(1.95rem, 2.5vw, 2.9rem);
     font-weight: 700;
     transition: color var(--transicao), transform var(--transicao);
 }
@@ -34,11 +34,13 @@
 }
 
 .menu-item-link:hover .menu-item-texto {
-    transform: translateX(2vw);
+    transform: translateX(.6rem);
     color: var(--cor-primaria);
 }
 
 .menu-item.ativo .menu-item-link,
 .menu-item.ativo .menu-item-link:hover .menu-item-texto {
-    color: var(--cor-destaque);
+    color: var(--cor-secundaria);
 }
+
+.menu-item.ativo .menu-item-icone { background-color: var(--cor-secundaria); }

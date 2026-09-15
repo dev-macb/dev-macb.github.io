@@ -20,7 +20,6 @@ const PaginaLayout: React.FC<IPaginaLayoutProps> = ({ children, titulo, subtitul
     return (
         <div className='pagina-aplicacao'>
             <CabecalhoComponent />
-
             <JanelaComponent>
                 <div className='pagina-acoes'>
                     { mostrarBotaoVoltar && <BotaoVoltarComponent /> }
@@ -32,7 +31,6 @@ const PaginaLayout: React.FC<IPaginaLayoutProps> = ({ children, titulo, subtitul
                     { children }
                 </article>
             </JanelaComponent>
-
             <RodapeComponent textoCopyright='@dev-macb' linkCopyright='https://github.com/dev-macb' />
         </div>
     );
