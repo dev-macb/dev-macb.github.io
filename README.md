@@ -1,23 +1,24 @@
-# Portfólio — Miguel Alves
+# dev-macb.github.io
 
-Portfólio pessoal de Miguel Alves, desenvolvido com React, TypeScript e Vite.
+Portfólio estático de Miguel Alves, desenvolvido com React, TypeScript e Vite. A aplicação é publicada no GitHub Pages: [dev-macb.github.io](https://dev-macb.github.io).
 
-[Visitar o site](https://dev-macb.github.io)
+## Stack
 
-## Tecnologias
+| Camada | Tecnologia |
+| --- | --- |
+| Interface | React 18 |
+| Linguagem | TypeScript |
+| Roteamento | React Router 6 |
+| Build | Vite 5 |
+| Qualidade | ESLint 9 |
+| Hospedagem | GitHub Pages |
 
-- React 18
-- TypeScript
-- React Router
-- Vite
-- ESLint
-
-## Pré-requisitos
+## Requisitos
 
 - Node.js 20 ou superior
 - npm 10 ou superior
 
-## Como executar
+## Ambiente local
 
 ```bash
 git clone https://github.com/dev-macb/dev-macb.github.io.git
@@ -26,25 +27,61 @@ npm ci
 npm run dev
 ```
 
-## Comandos disponíveis
+O Vite inicia o servidor de desenvolvimento em `http://localhost:5173`.
 
-| Comando | Finalidade |
+## Scripts
+
+| Comando | Efeito |
 | --- | --- |
-| `npm run dev` | Inicia o ambiente de desenvolvimento. |
-| `npm run lint` | Verifica problemas de qualidade no código. |
-| `npm run build` | Verifica os tipos e gera a versão de produção em `dist`. |
-| `npm run check` | Executa lint e build. |
-| `npm run preview` | Abre localmente a versão de produção. |
-| `npm run deploy` | Gera a versão de produção e a publica com GitHub Pages. |
+| `npm run dev` | Inicia o servidor de desenvolvimento. |
+| `npm run lint` | Executa o ESLint. |
+| `npm run build` | Executa a checagem de tipos e gera `dist/`. |
+| `npm run check` | Executa `lint` e `build`; é o comando de validação padrão. |
+| `npm run preview` | Serve localmente a versão gerada em `dist/`. |
+| `npm run deploy` | Publica manualmente em `gh-pages`; não é utilizado pelo CI/CD. |
 
-## Estrutura do projeto
+## Organização do código
 
 ```text
 src/
-├── app/          # configuração global, rotas, provedores e layouts
-├── assets/       # imagens e documentos importados pela aplicação
-├── pages/        # telas organizadas por rota
-└── shared/ui/    # componentes visuais reutilizáveis
+├── app/                 # composição da aplicação, rotas, tema, layouts e estilos globais
+├── assets/              # recursos versionados importados pela aplicação
+├── pages/               # páginas por rota e seus estilos/recursos locais
+└── shared/ui/           # componentes reutilizáveis e independentes de página
 ```
 
-Para criar uma página, adicione uma pasta em `src/pages` e registre a rota em `src/app/routes.tsx`. Componentes reutilizados por duas ou mais páginas pertencem a `src/shared/ui`; componentes específicos permanecem junto à própria página.
+- Registre rotas em `src/app/routes.tsx`.
+- Mantenha código específico em `src/pages/<pagina>/`.
+- Promova um componente para `src/shared/ui/` somente quando for reutilizado por mais de uma página.
+- Use `src/app/` para dependências de escopo global, como providers, layouts e configuração de rotas.
+
+### Rotas públicas
+
+| Rota | Página |
+| --- | --- |
+| `/` | Início |
+| `/sobre` | Sobre |
+| `/habilidades` | Habilidades |
+| `/portifolio` | Portfólio |
+| `/contato` | Contato |
+
+## Validação
+
+Antes de abrir um Pull Request, execute:
+
+```bash
+npm run check
+```
+
+Ainda não há uma suíte de testes automatizados configurada. A pipeline executa `npm run test --if-present`; ao adicionar um script `test` ao `package.json`, ele será executado automaticamente no CI.
+
+## CI/CD
+
+O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) é acionado por Pull Requests direcionados à `main`.
+
+- Em abertura, reabertura ou atualização do PR, instala dependências com `npm ci` e executa validação e testes disponíveis.
+- Em um PR fechado com merge, recompila a versão integrada da `main` e a publica no GitHub Pages.
+- O job de validação tem permissão apenas de leitura. As permissões de publicação (`pages: write` e `id-token: write`) são concedidas exclusivamente no job de deploy após o merge.
+- As actions são fixadas em commits imutáveis para reduzir o risco de alterações não revisadas em tags.
+
+No repositório do GitHub, configure **Settings → Pages → Build and deployment → Source** como **GitHub Actions** para habilitar a primeira publicação pelo workflow.
