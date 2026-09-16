@@ -32,6 +32,7 @@
     padding: clamp(2rem, 3.5vw, 3.4rem);
     border: 4px solid var(--cor-borda);
     border-radius: 1.35rem;
+    background-color: var(--cor-superficie);
 }
 
 .carrossel-cabecalho, .carrossel-controles {
@@ -121,4 +122,23 @@
 
 @media (max-width: 900px) {
     .carrossel-navegacao { display: none; }
+}
+
+@media (max-width: 700px) {
+    .carrossel { justify-content: flex-start; gap: 1.25rem; margin-top: .25rem; }
+    .carrossel-painel { overflow: hidden; }
+    .carrossel-item {
+        min-height: 0;
+        height: clamp(27rem, 55svh, 31rem);
+        gap: 1.5rem;
+        padding: 1.4rem;
+        border-width: 3px;
+        border-radius: 1.8rem;
+    }
+    .carrossel-cabecalho h3 { font-size: clamp(2rem, 11vw, 2.55rem); line-height: 1.05; }
+    .carrossel-tags { margin: .8rem 0; }
+    .carrossel-item p { font-size: .9rem; line-height: 1.35; }
+    .carrossel-visitar { align-self: stretch; padding: .75rem 1rem; border: 2px solid var(--cor-borda); border-radius: 1rem; text-align: center; color: var(--cor-primaria); background: transparent; }
+    .carrossel-paginacao { gap: 1rem; }
+    .carrossel-paginacao button { width: .75rem; height: .75rem; }
 }

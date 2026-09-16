@@ -1,7 +1,7 @@
 /* Rodape */
 .rodape-container {
     display: flex;
-    height: 5vh;
+    height: var(--altura-barra-principal);
     justify-content: center;
     width: 100%;
     align-items: center;

@@ -51,7 +51,10 @@
 }
 
 @media (max-width: 700px) {
-    .sobre-conteudo {
-        grid-template-columns: 1fr;
-    }
+    .pagina-sobre { gap: .85rem; }
+    .sobre-conteudo { grid-template-columns: 1fr; gap: 1.35rem; }
+    .sobre-foto { order: -1; }
+    .sobre-foto img { width: min(100%, 14.75rem); border-radius: 0; }
+    .sobre-apresentacao { gap: .65rem; font-size: clamp(.75rem, 3.25vw, .87rem); line-height: 1.28; text-align: center; }
+    .sobre-curriculo { align-self: center; min-width: min(100%, 16.5rem); margin-top: .55rem; padding: .8rem 1rem; border: 2px solid var(--cor-borda); border-radius: 1rem; color: var(--cor-primaria); background: transparent; }
 }

@@ -17,6 +17,7 @@
     --espacamento: 8px;
     --raio-borda: 20px;
     --transicao: 180ms ease;
+    --altura-barra-principal: 5vh;
 }
 
 .tema-escuro {
@@ -72,4 +73,17 @@ img {
 
 #root {
     min-height: 100vh;
+}
+
+@media (max-width: 700px) {
+    :root { --altura-barra-principal: 5svh; }
+}
+
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }

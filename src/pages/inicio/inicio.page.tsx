@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PaginaLayout } from '../../app/layouts';
 import { Menu } from '../../shared/ui';
@@ -6,11 +6,28 @@ import './inicio.style.css'
 
 
 const InicioPage: React.FC = () => {
+    const [menuAberto, definirMenuAberto] = useState(false);
+
     return (
         <PaginaLayout titulo='Miguel Alves' subtitulo='Programador' className='pagina-inicio'>
             <div className='inicio-conteudo'>
                 <section className='inicio-secao-esquerda'>
-                    <nav aria-label='Navegação principal'>
+                    <button
+                        className={ menuAberto ? 'inicio-botao-menu aberto' : 'inicio-botao-menu' }
+                        type='button'
+                        aria-expanded={ menuAberto }
+                        aria-controls='menu-principal'
+                        onClick={ () => definirMenuAberto((aberto) => !aberto) }
+                    >
+                        <span className='inicio-icone-hamburger' aria-hidden='true'>
+                            <i />
+                            <i />
+                            <i />
+                        </span>
+                        <span className='inicio-icone-fechar' aria-hidden='true'>×</span>
+                        <span className='visualmente-oculto'>{ menuAberto ? 'Fechar menu' : 'Abrir menu' }</span>
+                    </button>
+                    <div id='menu-principal' className={ menuAberto ? 'inicio-menu aberto' : 'inicio-menu' }>
                         <Menu>
                             <Menu.Item texto='Início' link='/' ativo />
                             <Menu.Item texto='Sobre' link='/sobre' />
@@ -18,7 +35,7 @@ const InicioPage: React.FC = () => {
                             <Menu.Item texto='Portfólio' link='/portifolio' />
                             <Menu.Item texto='Contato' link='/contato' />
                         </Menu>
-                    </nav>
+                    </div>
                 </section>
 
                 <section className='inicio-secao-direita'>

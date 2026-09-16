@@ -23,6 +23,7 @@
     place-items: center;
     border: 3px solid var(--cor-borda);
     border-radius: 1.8rem;
+    background-color: var(--cor-superficie);
     transition: transform var(--transicao), border-color var(--transicao), background-color var(--transicao);
 }
 
@@ -58,5 +59,26 @@
 }
 
 @media (max-width: 560px) {
-    .habilidades-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .janela-conteiner.pagina-habilidades {
+        height: auto;
+        min-height: calc(100svh - var(--altura-barra-principal) - var(--altura-barra-principal));
+    }
+
+    .janela-conteiner.pagina-habilidades .janela-conteudo {
+        min-height: calc(100svh - var(--altura-barra-principal) - var(--altura-barra-principal));
+    }
+
+    .pagina-habilidades { gap: 1rem; }
+
+    .habilidades-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-content: start;
+        gap: 1.45rem 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .habilidade { gap: .35rem; }
+    .habilidade-cartao { width: min(30vw, 7.5rem); border-width: 3px; border-radius: 1.45rem; }
+    .habilidade-marca { width: 3.5rem; height: 3.5rem; }
+    .habilidade h3 { font-size: .82rem; }
 }
