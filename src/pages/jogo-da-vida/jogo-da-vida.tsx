@@ -1,6 +1,7 @@
 import React, { FC, PointerEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RodapeComponent } from '../../app/layouts/rodape/rodape.component';
+import { AvisoOrientacaoComponent } from '../../shared/ui';
 import {
     alternarCelula,
     contarCelulasVivas,
@@ -115,6 +116,7 @@ const JogoDaVida: FC = () => {
 
     return (
         <div className='jogo-da-vida-pagina'>
+            <AvisoOrientacaoComponent direcao='horizontal' />
             <header className='jogo-da-vida-topo'>
                 <p>Jogo da Vida <span>· Conway</span></p>
                 <Link className='jogo-da-vida-marca' to='/' aria-label='Voltar à página inicial' />

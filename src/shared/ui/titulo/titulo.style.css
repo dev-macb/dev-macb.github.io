@@ -26,6 +26,14 @@
 }
 
 @media (max-width: 700px) {
-    .titulo-principal { font-size: clamp(3rem, 15vw, 4.5rem); }
-    .titulo-secundario { font-size: clamp(1.35rem, 6vw, 2rem); }
+    .titulo-principal {
+        font-size: clamp(2rem, 9.5vw, 2.5rem);
+        letter-spacing: -.07em;
+    }
+
+    .titulo-secundario {
+        margin-top: .3rem;
+        font-size: clamp(.95rem, 4.4vw, 1.15rem);
+        letter-spacing: -.045em;
+    }
 }

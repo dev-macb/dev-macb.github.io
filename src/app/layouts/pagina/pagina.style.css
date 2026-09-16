@@ -33,3 +33,17 @@
 @media (prefers-reduced-motion: reduce) {
     .pagina-conteiner { animation: none; }
 }
+
+@media (max-width: 700px) {
+    .pagina-acoes {
+        min-height: 2rem;
+    }
+
+    .pagina-conteiner {
+        gap: 1rem;
+        padding: 1.1rem 0 0;
+    }
+
+    .pagina-acoes .botao-voltar span { display: none; }
+    .pagina-acoes .botao-voltar svg { width: 2rem; height: 2rem; }
+}

@@ -1,1 +1,5 @@
 .pagina-portifolio { min-height: 0; }
+
+@media (max-width: 700px) {
+    .pagina-portifolio { gap: 1.25rem; }
+}
