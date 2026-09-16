@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PaginaLayout } from '../../app/layouts';
 import { Menu } from '../../shared/ui';
 import './inicio.style.css'
@@ -20,7 +21,8 @@ const InicioPage: React.FC = () => {
                     </nav>
                 </section>
 
-                <section className='inicio-secao-direita' aria-label='Ilustração decorativa'>
+                <section className='inicio-secao-direita'>
+                    <Link className='inicio-link-cubo' to='/jogo-da-vida' aria-label='Abrir o Jogo da Vida de Conway'>
                     <svg width="320" height="368" viewBox="0 0 270 310" className='inicio--imagem-cubo-impossivel'>
                         <path d="M135 0L269.5 76.5L270 232L162 171L191 156L243 186V95L163 48V108L135 125V0Z" fill="var(--cor-primaria)"/>
                         <path d="M27 95L135 155.706V279L55 232L80 216.5L108 232.706V171L54.5 139.706V169.046L27 185V95Z" fill="var(--cor-primaria)"/>
@@ -29,6 +31,8 @@ const InicioPage: React.FC = () => {
                         <path d="M0 77L135 0V125L107 109V48L27 95V185L79.5 154.5L108 171L0 232V77Z" fill="var(--cor-destaque)"/>
                         <path d="M135 155.833L243 95V186L216 170.5V143L162 171V233L190 216.5L217 232L135 279V155.833Z" fill="var(--cor-destaque)"/>
                     </svg>
+                    <span className='inicio-dica-cubo'>Explorar Jogo da Vida</span>
+                    </Link>
                 </section>
             </div>
         </PaginaLayout>
